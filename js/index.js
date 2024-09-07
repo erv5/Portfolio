@@ -1,18 +1,18 @@
 const codeGallery = {
 	init: (selector) => {
-		$.getJSON('/json/projects.json', function(projects){
-			let html = '';
-			for (let project of projects){
-				html += `
-				<div class="col-4 col-md-2 project">
-					<div class="project-container">
-						${codeGallery.icon(project.name, project.icon, project.link)}
-					</div>
-				</div>
-				`;
-			}
-			$(selector).html(html);
-		});
+	  $.getJSON('/json/projects.json', function(projects) {
+		let html = '';
+		for (let project of projects) {
+		  html += `
+			<div class="col-6 col-sm-4 col-md-3 col-lg-2 project">
+			  <div class="project-container">
+				${codeGallery.icon(project.name, project.icon, project.link)}
+			  </div>
+			</div>
+		  `;
+		}
+		$(selector).html(html);
+	  });
 	},
 	icon: (name, img, href) => {
 		return `
@@ -45,21 +45,21 @@ const codeGallery = {
 const artGallery = {
 	init: (selector) => {
 		let images = [
-			'/images/art/buu.jpg',
-			'/images/art/nimbus.jpg',
-			'/images/art/starman.jpg',
+			'/images/art/art1.png',
+			'/images/art/art2.png',
+			'/images/art/art3.png',
 
-			'/images/art/gohan.jpg',
-			'/images/art/gohan.jpg',
-			'/images/art/gohan.jpg',
-			//'/images/art/gohan.jpg',
-			//'/images/art/gohan.jpg',
+			'/images/art/art4.png',
+			'/images/art/art5.png',
+			'/images/art/art6.jpeg',
+			//'/images/art/blank.png',
+			//'/images/art/blank.png',
 
-			//'/images/art/gohan.jpg',
-			//'/images/art/gohan.jpg',
+			//'/images/art/blank.png',
+			//'/images/art/blank.png',
 
-			//'/images/art/gohan.jpg',
-			//'/images/art/gohan.jpg',
+			//'/images/art/blank.png',
+			//'/images/art/blank.png',
 
 		];
 		let html = '';
